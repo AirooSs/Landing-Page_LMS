@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Istok Web", sans-serif;
+}
+
+body {
+    background-image: url(./img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+header .logo {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+header .logo:hover {
+    color: rgb(0, 0, 0);
+    background: white;
+}
+
+header .navbar {
+    display: none; /* Oculto por defecto en móviles */
+}
+
+/* Menú para móviles */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transition: all 0.3s;
+}
+
+/* Contenido principal */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.tituloBox {
+    text-align: center;
+    max-width: 800px;
+}
+
+.tituloBox h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.tituloBox h2 span {
+    background: rgb(0, 0, 0);
+    color: white;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.tituloBox p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.tituloBox a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(137, 66, 188);
+    background: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.tituloBox a:hover {
+    background: rgb(137, 66, 188);
+    color: white;
+}
+
+.imgBox {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgBox img {
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+}
+
+/* Formulario de contacto */
+.formulariobox {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.formulariobox h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    border: none;
+    padding: 20px;
+    background: rgba(0, 3, 170, 0.7);
+    border-radius: 10px;
+}
+
+#caja {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+#enviar, #borrar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#enviar {
+    background: rgb(137, 66, 188);
+    color: white;
+}
+
+#borrar {
+    background: rgb(137, 66, 188);
+    color: white;
+}
+
+#enviar:hover {
+    background: white;
+    color: rgb(137, 66, 188);
+}
+
+#borrar:hover {
+    background: red;
+    color: white;
+}
+
+/* Quién soy y CV */
+.quiensoybox, .cvbox {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.quiensoy, .cv {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.redesSociales {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.redesSociales li {
+    margin: 0 15px;
+}
+
+.redesSociales a {
+    color: white;
+    font-size: 1.5em;
+    transition: all 0.3s;
+}
+
+.redesSociales a:hover {
+    color: rgb(137, 66, 188);
+}
+
+.copyright p {
+    margin-bottom: 10px;
+}
+
+
+/* Tabletas pequeñas (576px y más) */
+@media (min-width: 576px) {
+    .tituloBox h2 {
+        font-size: 2.5em;
+    }
+    
+    .tituloBox p {
+        font-size: 1.3em;
+    }
+    
+    .imgBox img {
+        max-height: 60vh;
+    }
+    
+    .quiensoy, .cv {
+        font-size: 1.2em;
+    }
+}
+
+/* Tabletas grandes (768px y más) */
+@media (min-width: 768px) {
+    .contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .tituloBox {
+        text-align: left;
+        max-width: 50%;
+    }
+    
+    .imgBox {
+        max-width: 45%;
+    }
+    
+     /*LOS RESPONSIVE PARA VERLO DESDE DISTINTOS DISPOSITIVOS HECHOS MEDIANTE IA*/
+    .menu-toggle {
+        display: none;
+    }
+    
+    header .navbar {
+        display: flex;
+    }
+    
+    header .navbar li {
+        list-style: none;
+        margin-left: 30px;
+    }
+    
+    header .navbar li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1em;
+        padding: 5px;
+        transition: all 0.3s;
+    }
+    
+    header .navbar li a:hover {
+        border-bottom: 3px solid rgb(10, 6, 65);
+        color: rgb(21, 66, 163);
+    }
+}
+
+@media (min-width: 992px) {
+    .tituloBox h2 {
+        font-size: 3em;
+    }
+    
+    .tituloBox p {
+        font-size: 1.5em;
+    }
+    
+    header .navbar li {
+        margin-left: 50px;
+    }
+    
+    .imgBox img {
+        max-height: 70vh;
+    }
+}
+@media (min-width: 1200px) {
+    section {
+        padding: 100px;
+    }
+    
+    .tituloBox h2 {
+        font-size: 3.5em;
+    }
+    
+    .quiensoy, .cv {
+        font-size: 1.3em;
+    }
+}
